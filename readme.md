@@ -14,10 +14,15 @@ BAYC ETH Mainet: 0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D
     - Tokens (Token IDs) 
 
 Playground: https://thegraph.com/hosted-service/subgraph/liyang-ust/camp?selected=playground
+
 API: https://api.thegraph.com/subgraphs/name/liyang-ust/camp
 
 
 ## 操作流程
+
+1. 跟随官方教程初始化之后 修改文件到这个仓库的版本
+   
+2. 直接下载该仓库
 
 ### 下载代码仓库
 ```
