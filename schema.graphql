@@ -1,0 +1,18 @@
+type BoredApeToken @entity {
+  id: ID!
+
+  # image info
+  tokenID: BigInt!
+  contentURI: String!
+  createdAtTimestamp: BigInt!
+
+  # relation
+  owner: BoredApeUser!
+}
+
+type BoredApeUser @entity {
+  id: ID!
+
+  # owned tokens
+  tokens: [BoredApeToken!]! @derivedFrom(field: "owner")
+}

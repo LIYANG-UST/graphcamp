@@ -1,0 +1,26 @@
+specVersion: 0.0.5
+schema:
+  file: schema.graphql
+dataSources:
+  - kind: ethereum
+    name: BoredApe
+    network: mainnet
+    source:
+      address: "0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D"
+      abi: BoredApe
+      startBlock: 12287507
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Transfer
+      abis:
+        - name: BoredApe
+          file: BoredApe/abis/BoredApe.json
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,indexed uint256)
+          handler: handleTransfer
+      file: BoredApe/BoredApe.wasm
+features:
+  - ipfsOnEthereumContracts
